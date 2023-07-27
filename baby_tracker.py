@@ -35,6 +35,57 @@ def record_baby_activities():
 
         print("Data has been recorded successfully!")
 
+# Second Feature - remove entry
+
+def remove_baby_entry():
+    baby_name = input("Enter baby name to select activities for removal: ").lower()  # Convert baby name to lowercase
+    try:
+        with open('baby_data.txt', 'r') as file:
+            lines = file.readlines()
+    except FileNotFoundError:
+        print("No data found.")
+        return
+
+    entries_to_remove = []
+    for line in lines:
+        record = line.strip().split(',')
+        if record[0].lower() == baby_name:  # Check for case-insensitive baby name match
+            entries_to_remove.append(record)
+
+    if not entries_to_remove:
+        print("No entry found for the specified baby name.")
+        return
+
+    print(f"Entries for {baby_name}:")
+    for idx, entry in enumerate(entries_to_remove, start=1):
+        print(f"{idx}. Date: {entry[5]}")
+        print("   Nappies:", entry[1])
+        print("   100ml Bottles:", entry[2]) 
+        print("   Weight:", entry[3], "kg")
+        print("   Length:", entry[4], "cm")
+        print("-" * 30)
+
+    while True:
+        selection = input("Enter the number of the entry to remove (or 'q' to cancel): ")
+        if selection.lower() == 'q':
+            return
+
+        if not selection.isdigit():
+            print("Invalid input. Please enter a number.")
+            continue
+
+        selection = int(selection)
+        if 1 <= selection <= len(entries_to_remove):
+            selected_entry = entries_to_remove[selection - 1]
+            with open('baby_data.txt', 'w') as file:
+                for line in lines:
+                    if line.strip() != ','.join(selected_entry):
+                        file.write(line)
+            print("Entry has been removed successfully.")
+            break
+        else:
+            print("Invalid selection. Please enter a valid number.")
+
 # Helpers
 def get_valid_int(prompt):
     while True:
@@ -72,13 +123,18 @@ if __name__ == "__main__":
     while True:
         print("\nMenu:")
         print("1. Record Baby Activities")
-        print("2. Exit")
+        print("2. Clean Data")
+        print("3. Exit")
         choice = get_valid_int("Enter your choice: ")
 
         if choice == 1:
             record_baby_activities()
-        elif choice == 2:
-            break
 
+        elif choice == 2:
+            remove_baby_entry()
+
+        elif choice == 3:
+            break
         else:
             print("Invalid choice. Please try again.")
+
