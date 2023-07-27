@@ -176,6 +176,7 @@ if __name__ == "__main__":
         if choice == 1:
             record_baby_activities()
 
+
         elif choice == 2:
             remove_baby_entry()
 
@@ -186,4 +187,6 @@ if __name__ == "__main__":
             break
         else:
             print("Invalid choice. Please try again.")
+
+
 
