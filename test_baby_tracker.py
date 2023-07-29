@@ -45,7 +45,7 @@ class TestGetValidInt(unittest.TestCase):
         self.assertIsNone(result)
 
 # Last test - Valid date 
-class TestGetValidInt(unittest.TestCase):
+class TestGetValidDate(unittest.TestCase):
     # Test a valid int number
     @patch('builtins.input', side_effect=['2020-02-03'])
     def test_valid_date(self, mock_input):
