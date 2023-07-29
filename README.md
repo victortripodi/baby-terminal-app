@@ -1,14 +1,11 @@
-# baby-terminal-app
+# Baby Terminal App
 
-Referenced sources
-[Python](https://docs.python.org/3/)
-[Testing](https://docs.pytest.org/en/7.1.x/contents.html)
+Referenced sources: [Python](https://docs.python.org/3/), [Testing](https://docs.pytest.org/en/7.1.x/contents.html)
 
+Source control repository [Github](https://github.com/victortripodi/baby-terminal-app.git)
 
-Source control repository
-[Github](https://github.com/victortripodi/baby-terminal-app.git)
+## Styling conventions
 
-Styling conventions
 I adhered to the PEP 8 style guide for Python. PEP 8 is the official style guide for Python code and provides guidelines on how to format Python code to enhance readability and maintainability. Key conventions that I followed:
 - Indentation: Four spaces are used for indentation in the code.
 - Line Length: Lines are kept within the recommended maximum length of 79 characters to enhance readability.
@@ -18,7 +15,8 @@ I adhered to the PEP 8 style guide for Python. PEP 8 is the official style guide
 - Function and Class Definitions: Functions and classes are separated by two blank lines to improve readability.
 - Comments: Descriptive comments are included in the code to explain the purpose of functions and blocks of code.
 
-Features of the application
+## Features of the application
+
 The terminal Baby Tracker application allows users to record various activities related to a baby, remove specific entries, and view weekly totals of nappies and bottles for each baby. The application provides a menu-based interface for interacting with these features.
 
 1. Record Baby Activities:
@@ -29,9 +27,9 @@ With this feature, the user can view the total number of nappies changed and the
 This feature allows the user to remove specific baby activity entries from the recorded data. The user will be prompted to enter the baby's name, and the application will display all the recorded entries for that baby. The user can then select a specific entry to remove from the records.
 
 
-Implementation Plan
-I used Trello to track the implementation plan. 
+## Implementation Plan
 
+I used Trello to track the implementation plan. 
 
 1. Record Baby Activities (Priority: High)
 
@@ -65,7 +63,8 @@ Checklist:
  - Test the function with various data to ensure correctness.
 
 
-Baby Tracker Application - Help Documentation
+## Baby Tracker Application - Help Documentation
+
 1. Introduction
 The Baby Tracker Application is a terminal-based tool designed to help parents to keep track of their baby's activities, such as diaper changes, bottle feedings, weight, and length measurements. This documentation provides instructions on how to install, run, and use the application effectively.
 2. Installation
