@@ -59,12 +59,12 @@ def remove_baby_entry():
         return
 
     print(f"Entries for {baby_name}:")
-    for idx, entry in enumerate(entries_to_remove, start=1):
-        print(f"{idx}. Date: {entry[5]}")
-        print("   Nappies:", entry[1])
-        print("   100ml Bottles:", entry[2]) 
-        print("   Weight:", entry[3], "kg")
-        print("   Length:", entry[4], "cm")
+    for index, baby_entry in enumerate(entries_to_remove, start=1):
+        print(f"{index}. Date: {baby_entry[5]}")
+        print("   Nappies:", baby_entry[1])
+        print("   100ml Bottles:", baby_entry[2]) 
+        print("   Weight:", baby_entry[3], "kg")
+        print("   Length:", baby_entry[4], "cm")
         print("-" * 30)
 
     while True:
@@ -83,7 +83,7 @@ def remove_baby_entry():
                 for line in lines:
                     if line.strip() != ','.join(selected_entry):
                         file.write(line)
-            print("Entry has been removed successfully.")
+            print(baby_name + " entry has been removed successfully.")
             break
         else:
             print("Invalid selection. Please enter a valid number.")
