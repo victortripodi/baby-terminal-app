@@ -1,13 +1,12 @@
 # baby-terminal-app
 
 Referenced sources
-Python: https://docs.python.org/3/
-        https://www.w3schools.com/python/
-Testing: https://docs.pytest.org/en/7.1.x/contents.html
+[Python](https://docs.python.org/3/)
+[Testing](https://docs.pytest.org/en/7.1.x/contents.html)
 
 
 Source control repository
-Github: https://github.com/victortripodi/baby-terminal-app.git
+[Github](https://github.com/victortripodi/baby-terminal-app.git)
 
 Styling conventions
 I adhered to the PEP 8 style guide for Python. PEP 8 is the official style guide for Python code and provides guidelines on how to format Python code to enhance readability and maintainability. Key conventions that I followed:
@@ -83,7 +82,7 @@ Step 2: Navigate to the application directory.
 Step 3: Launch the application by running the following command:
      python3 baby_tracker.py
 5. Using the Application
-Upon launching the application, you will see a menu with different options. Follow the prompts and enter the required information to record baby activities, view total activities per week, or remove baby entries. The application will guide you through each step, and you can use the menu options to navigate between features.
+Upon launching the application, you will see a menu with different options. Follow the prompts and enter the required information to record baby activities (this function also allows users to quit entering baby activities at any stage during the data input process entering "q"), view total activities per week, or remove baby entries. The application will guide you through each step, and you can use the menu options to navigate between features.
 6. Exiting the Application
 To exit the Baby Tracker Application, select option 4 from the menu. The application will gracefully terminate, and you will return to the command prompt.
 
