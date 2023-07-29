@@ -31,7 +31,7 @@ class TestGetValidFloat(unittest.TestCase):
 
 
 # Third test - Valid int number
-class TestGetValidFloat(unittest.TestCase):
+class TestGetValidInt(unittest.TestCase):
     # Test a valid int number
     @patch('builtins.input', side_effect=['10'])
     def test_valid_input(self, mock_input):
@@ -43,6 +43,7 @@ class TestGetValidFloat(unittest.TestCase):
     def test_quit_input(self, mock_input):
         result = get_valid_int("Enter an int number (or 'q' to quit): ")
         self.assertIsNone(result)
+
 
 if __name__ == '__main__':
     unittest.main()
