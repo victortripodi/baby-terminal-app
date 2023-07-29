@@ -4,7 +4,7 @@ from datetime import datetime
 
 def record_baby_activities():
     while True:
-        baby_name = input("Enter baby name (or 'q' to quit): ")
+        baby_name = input("Enter baby name (or 'q' to go back): ")
         if baby_name.lower() == 'q':
             break
 
