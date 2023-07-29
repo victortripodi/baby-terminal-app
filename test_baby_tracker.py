@@ -1,6 +1,6 @@
 import unittest
 from unittest.mock import patch
-from baby_tracker import get_week_number, get_valid_float
+from baby_tracker import get_week_number, get_valid_float, get_valid_int
 
 # First test - Check week number
 class TestGetWeekNumber(unittest.TestCase):
@@ -27,6 +27,21 @@ class TestGetValidFloat(unittest.TestCase):
     @patch('builtins.input', side_effect=['q'])
     def test_quit_input(self, mock_input):
         result = get_valid_float("Enter a floating number (or 'q' to quit): ")
+        self.assertIsNone(result)
+
+
+# Third test - Valid int number
+class TestGetValidFloat(unittest.TestCase):
+    # Test a valid int number
+    @patch('builtins.input', side_effect=['10'])
+    def test_valid_input(self, mock_input):
+        result = get_valid_int("Enter an int number: ")
+        self.assertAlmostEqual(result, 10)
+
+    # Test quit from get_valid_int
+    @patch('builtins.input', side_effect=['q'])
+    def test_quit_input(self, mock_input):
+        result = get_valid_int("Enter an int number (or 'q' to quit): ")
         self.assertIsNone(result)
 
 if __name__ == '__main__':
