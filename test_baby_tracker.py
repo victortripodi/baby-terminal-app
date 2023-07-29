@@ -15,7 +15,7 @@ class TestGetWeekNumber(unittest.TestCase):
         # Test a date from the last week of the year
         self.assertEqual(get_week_number('2023-12-31'), 53)
 
-# Second test - Valid input
+# Second test - Valid float number
 class TestGetValidFloat(unittest.TestCase):
     # Test a valid float number
     @patch('builtins.input', side_effect=['3.14'])
