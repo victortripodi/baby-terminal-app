@@ -1,6 +1,6 @@
-
 import unittest
-from baby_tracker import get_week_number
+from unittest.mock import patch
+from baby_tracker import get_week_number, get_valid_float
 
 class TestGetWeekNumber(unittest.TestCase):
 
@@ -15,3 +15,18 @@ class TestGetWeekNumber(unittest.TestCase):
         self.assertEqual(get_week_number('2023-12-31'), 53)
 
 
+class TestGetValidFloat(unittest.TestCase):
+    # Test a valid float number
+    @patch('builtins.input', side_effect=['3.14'])
+    def test_valid_input(self, mock_input):
+        result = get_valid_float("Enter a floating number: ")
+        self.assertAlmostEqual(result, 3.14)
+
+    # Test quit from get_valid_float
+    @patch('builtins.input', side_effect=['q'])
+    def test_quit_input(self, mock_input):
+        result = get_valid_float("Enter a floating number (or 'q' to quit): ")
+        self.assertIsNone(result)
+
+if __name__ == '__main__':
+    unittest.main()
