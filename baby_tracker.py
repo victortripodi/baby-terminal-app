@@ -37,7 +37,7 @@ def record_baby_activities():
 
 
 
-# Second feature - remove entry
+# Second feature - remove baby entry
 
 def remove_baby_entry():
     baby_name = input("Enter baby name to select activities for removal: ").lower()  # Convert baby name to lowercase
@@ -162,7 +162,9 @@ def get_valid_date(prompt):
             return date
         except ValueError:
             print("Invalid date format. Please use YYYY-MM-DD format.")
-# Menu
+
+
+# Entry app - Menu
 if __name__ == "__main__":
     print("Welcome to the Terminal Baby Tracker Application!")
     while True:
