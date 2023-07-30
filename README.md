@@ -72,9 +72,19 @@ Checklist:
 The Baby Tracker Application is a terminal-based tool designed to help parents to keep track of their baby's activities, such as diaper changes, bottle feedings, weight, and length measurements. This documentation provides instructions on how to install, run, and use the application effectively.
 2. Installation
 Follow these steps to install the Baby Tracker Application:
-Step 1: Ensure you have Python installed on your system. The application is compatible with Python 3.
-Step 2: Download the Baby Tracker Application files to your local machine. You can either clone the repository from GitHub or download the ZIP archive and extract it.
-Step 3: Navigate to the application directory using the terminal.
+Step 1: Download the Baby Tracker Application files to your local machine. You can either clone the repository from GitHub or download the ZIP archive and extract it.
+Step 2: Navigate to the application directory using the terminal.
+Step 3: Run the app
+- If you have Python installed, type the following comand in the terminal/command prompt
+python baby_tracker.py
+- If you have multiple versions of Python installed, you may need to use python3 instead of python, like this:
+python3 baby_tracker.py
+- If you don't have any Python version installed, don't worry, type the following comand
+./script.sh
+but first, you will to change the permission typing the following comand
+chmod +x script.sh  
+
+
 3. System/Hardware Requirements
 The Baby Tracker Application is a lightweight terminal-based tool and should run without any specific hardware requirements. It is compatible with Windows, macOS, and Linux operating systems.
 4. How to Use the Application
